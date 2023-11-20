@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'clientes/css/clientes.css' %}">
+    <link rel="stylesheet" href="{% static 'servicos/css/listar_servico.css' %}">
+{% endblock %}
+
+{% block 'dashboard' %}
+<div class="container-fluid distanciamento">
+    
+    <h2 class="text-center p-4 titulo">Listar Serviços</h2>
+    <div class="row">
+        {% for servico in servicos %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+        
+                        <h5 class="card-title "><a href="{% url 'servico' servico.identificador %}">{{servico.titulo}}</a></h5>
+                        <p class="card-text text-muted">Cliente: {{servico.cliente}}</p>
+                        <p class="card-text">
+                            {% if servico.finalizado %}
+                                <span class="badge badge-success">Finalizado</span>
+                            {% else %}
+                                <span class="badge badge-info">Em manutenção</span>
+                            {% endif %}
+                        </p>
+                        <div>
+                            <h6 class="card-subtitle mb-2 text-muted mt-3">Preços por serviços:</h6>
+                            <ul class="list-unstyled text-dark">
+                            {% for categoria, preco in servico.precos_por_categoria.items %}
+                                <li>{{ categoria }}: {{ preco }}</li>
+                            {% endfor %}
+                            </ul>
+                            <p class="card-text text-danger">Preço total a pagar: {{servico.preco_total}}</p>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

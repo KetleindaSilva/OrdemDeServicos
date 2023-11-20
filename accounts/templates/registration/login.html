@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block 'dashboard' %}
+
+<div class="col text-center">
+    <h4 class="p-4">Faça seu Login</h4>
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label class="form-label text-white" for="id_username">Usuário:</label>
+            <input type="text" name="username" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label" for="id_password">Senha:</label>
+            <input type="password" name="password" class="form-control">
+        </div>
+
+        <button class="btn btn-success " type="submit">Entrar</button>
+    </form>
+    
+    <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
+</div>
+
+
+{% endblock %}

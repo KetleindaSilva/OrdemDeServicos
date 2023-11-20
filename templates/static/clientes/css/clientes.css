@@ -1,0 +1,80 @@
+.card-dashboard{
+
+    background-color:rgb(255, 127, 253);
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.text-card{
+
+    font-size: 25px;
+
+}
+h2{
+    color: #e30cbb;
+}
+.btn-add-carros{
+
+    background-color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.text-pink {
+    color: #ff69b4; 
+}
+.btn-principal{
+    color:rgb(240, 12, 198);
+    border: none;
+    background-color: var(--dark-color);
+    padding: 5px;
+    font-size: 30px;
+}
+
+#att_cliente{
+    display: none;
+}
+
+#form-att-cliente{
+    display: none;
+
+}
+.card-dashboard{
+
+    background-color:blueviolet;
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.text-card{
+
+    font-size: 25px;
+
+}
+
+.btn-add-carros{
+
+    background-color: var(--contrast-color);
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.btn-principal{
+    color:white;
+    border: none;
+    background-color: var(--dark-color);
+    padding: 5px;
+    font-size: 30px;
+}
