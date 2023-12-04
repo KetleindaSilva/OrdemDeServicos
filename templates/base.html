@@ -15,7 +15,7 @@
     <title>{% block 'title' %}{% endblock %}</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'principal' %}">Silva Manutenções</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -26,7 +26,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'login' %}">
-                        <i class='bx  bx-user'></i>
+                        <i class='bx bx-user'></i>
                         <span class="links_name">Login</span>
                     </a>
                 </li><li class="nav-item active">
@@ -49,12 +49,12 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'novo_servico' %}">
                         <i class='bx bx-chat'></i>
-                        <span class="links_name">Serviços</span>
+                        <span class="links_name">Criar Serviços</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'listar_servico' %}">
-                        <i class='bx bx-folder'></i>
+                        <i class='bx card-checklist'></i>
                         <span class="links_name">Ver Serviços</span>
                     </a>
                 </li>

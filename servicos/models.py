@@ -1,7 +1,7 @@
 from email.policy import default
 from secrets import token_hex, token_urlsafe
 from django.db import models
-from clientes.models import Cliente
+from clientes.models import Cliente,Carro
 from .choices import ChoicesCategoriaManutencao
 from datetime import datetime
 

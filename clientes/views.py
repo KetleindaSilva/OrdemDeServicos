@@ -42,7 +42,7 @@ def clientes(request):
             car = Carro(carro=carro, placa=placa, ano=ano, cliente=cliente)
             car.save()
 
-        return HttpResponse('Teste')       
+    return render(request,'principal.html')      
 
 
 def att_cliente(request):
@@ -81,7 +81,7 @@ def update_carro(request, id):
     carro.ano = ano
     carro.save()
 
-    return HttpResponse(id)
+    return render(request,'principal.html')
 
 def update_cliente(request, id):
     body = json.loads(request.body)
